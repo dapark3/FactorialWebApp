@@ -8,13 +8,13 @@ namespace FactorialTests
     {
         private readonly FactorialService.FactorialService service; 
 
-        public FactorialCalculatorTests()
+        public FactorialServiceTests()
         {
             calculator = new FactorialService.FactorialService(); 
         }
 
         [Fact]
-        public void Calculate_ShouldReturnCorrectFactorial_ForPositiveNumber()
+        public void Calculate_ReturnCorrectFactorial_ForPositiveNumber()
         {
             int number = 5;
             long expected = 120; 
@@ -25,7 +25,7 @@ namespace FactorialTests
         }
 
         [Fact]
-        public void Calculate_ShouldReturnOne_ForZero()
+        public void Calculate_ReturnOne_ForZero()
         {
             int number = 0;
             long expected = 1; 
@@ -36,7 +36,7 @@ namespace FactorialTests
         }
 
         [Fact]
-        public void Calculate_ShouldThrowArgumentException_ForNegativeNumber()
+        public void Calculate_ThrowArgumentException_ForNegativeNumber()
         {
             int number = -1;
 

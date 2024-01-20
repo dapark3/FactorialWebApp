@@ -2,7 +2,7 @@
 
 public class FactorialService
 {
-    public int Calculate(int number)
+    public long Calculate(int number)
     {
         if (number < 0)
         {

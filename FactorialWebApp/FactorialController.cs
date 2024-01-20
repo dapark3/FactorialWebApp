@@ -4,9 +4,9 @@ namespace FactorialController.Controllers;
 
 public class FactorialController : Controller
 {
-      private readonly FactorialCalculator factorialCalculator;
+      private readonly FactorialService factorialService;
     public FactorialController(){
-        factorialCalculator = new FactorialCalculator();
+        factorialService = new FactorialService();
     }
 
     public IndexActionResult Index(){
@@ -14,7 +14,7 @@ public class FactorialController : Controller
         long factorialResult;
 
         try{
-            factorialResult = factorialCalculator.Calculate(number);
+            factorialResult = factorialService.Calculate(number);
         }
         catch (Exception ex){
             return View("Error", ex.Message);
